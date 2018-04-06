@@ -6,7 +6,7 @@ describe ('record', function() {
     var shop;
 
     beforeEach(function(){
-      record = new Record("Otis Redding", "Dock of a Bay","Soul",10.00);
+      record = new Record("Otis Redding", "Dock of a Bay","Soul",10);
     })
 
     it("should have an artist", function() {
@@ -28,5 +28,9 @@ describe ('record', function() {
       assert.strictEqual(record.price, 10.00);
 
     });
+
+    it("should display record details as a string", function(){
+      assert.strictEqual(record.recordProperties(), "Otis Redding Dock of a Bay Soul 10")
+    })
 
 });

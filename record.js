@@ -1,7 +1,4 @@
-// Create a Record object that has an Artist, Title, Genre, and Price
-// Create a Record Store that has a Name, City and an Inventory.
-// Give the Record Store a Balance.
-// Add some Records to the Store's Inventory.
+// Create a method that prints out the Record's properties as a string.
 
 
 var Record = function(artist, title, genre, price) {
@@ -10,5 +7,13 @@ var Record = function(artist, title, genre, price) {
   this.genre = genre;
   this.price = price;
 }
+// concat to make a string
+Record.prototype.recordProperties = function () {
+  return this.artist +" "+ this.title +" "+ this.genre +" "+ this.price;
+};
+
+
+
+
 
 module.exports = Record;
