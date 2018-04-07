@@ -31,6 +31,8 @@ describe ('record', function() {
 
     it("should display record details as a string", function(){
       assert.strictEqual(record.recordProperties(), "Otis Redding Dock of a Bay Soul 10")
-    })
+    });
+
+
 
 });

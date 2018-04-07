@@ -11,7 +11,9 @@ describe ('Store', function() {
 
     beforeEach(function(){
       store = new Store("Alans Record Shop", "Glasgow", 50.00);
-      record = new Record("Otis Redding", "Dock of a Bay","Soul",10.00);
+      record1 = new Record("Otis Redding", "Dock of a Bay","Soul",10.00);
+      record2 = new Record("Ella Fitzgerald", "Dream a little Dream","Soul",12.00);
+      record3 = new Record("Chuck Berry", "Never can tell", "Soul", 14.00);
     })
 
     it("should have a name", function() {
@@ -25,7 +27,7 @@ describe ('Store', function() {
     });
 
     it("should have stock", function() {
-      assert.strictEqual(store.stock[0]);
+      assert.strictEqual(store.stock[2]);
 
     });
 
@@ -37,7 +39,22 @@ describe ('Store', function() {
     it("should be able to add a record", function(){
       store.addRecord(record);
       assert.strictEqual(store.stock[0], record);
-    })
+    });
+
+    it("should be able to list all stock", function(){
+      assert.strictEqual(store.listStock[0], record);
+    });
+
+    it("should be able to sell stock", function(){
+      assert.strictEqual(store.sellARecord[0], stock);
+    });
+
+    it('should find the store balance', function() {
+      store.addRecord(record1);
+      store.addRecord(record2);
+      store.addRecord(record3);
+      assert.equal(store.storeBalance[0], 86);
+    });
 
 
 

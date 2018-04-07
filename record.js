@@ -1,4 +1,4 @@
-// Create a method that prints out the Record's properties as a string.
+
 
 
 var Record = function(artist, title, genre, price) {
@@ -10,6 +10,7 @@ var Record = function(artist, title, genre, price) {
 // concat to make a string
 Record.prototype.recordProperties = function () {
   return this.artist +" "+ this.title +" "+ this.genre +" "+ this.price;
+
 };
 
 

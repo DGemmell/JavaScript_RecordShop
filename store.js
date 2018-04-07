@@ -1,5 +1,6 @@
 // Create a method that lists the inventory.
-// Create a method so the Record Store can sell a Record and adjusts the Store's balance to account for the Record being sold.
+// Create a method so the Record Store can sell
+// a Record and adjusts the Store's balance to account for the Record being sold.
 // Create a method that reports the financial situation of the Store, showing the balance and value of inventory.
 // Create a method that allows the store to view all Records of a given Genre.
 var _ = require("lodash");
@@ -16,8 +17,32 @@ Store.prototype = {
     this.stock.push(record);
   }
 }
+// i want to loop over the stock array and return stock items.
+// Stock.prototype.listRecords = function (stock) {
+//   this.stock.forEach(function(stock)
+//     this.stock(stock);
+// };
 
+Store.prototype = {
+  sellARecord: function(record) {
+    this.stock.pop(record);
+  }
+}
 
+// Create a method so the Record Store can sell(function)
+// a Record and adjusts the Store's balance to account for the Record being sold.
+// If store sells a record.price then store.balance will increase
+
+Store.prototype.storeBalance = function (balance) {
+  var balance = 50;
+  if(stock.length === 3 ){
+    balance = 50;
+  }
+  if(stock.length === 0){
+    balance = 80;
+  }
+  return this.balance;
+};
 
 
 module.exports = Store;
