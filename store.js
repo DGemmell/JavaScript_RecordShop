@@ -1,6 +1,5 @@
 // Create a method that lists the inventory.
 // Create a method that reports the financial situation of the Store, showing the balance and value of inventory.
-// Create a method that allows the store to view all Records of a given Genre.
 var _ = require("lodash");
 
 var Store = function(name, city, balance) {
@@ -42,6 +41,13 @@ Store.prototype.storeBalance = function (balance) {
   return this.balance;
 
 };
+
+Store.prototype.stockValue = function () {
+  var value = this.stock.reduce(function(acc, stockValue) {
+    return acc + stockValue.value;
+  }, 0)
+  return value;
+}
 
 
 

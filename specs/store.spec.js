@@ -36,25 +36,32 @@ describe ('Store', function() {
 
     });
 
-    it("should be able to add record", function(){
+    it("should be able to add record", function() {
       assert.strictEqual(store.addRecord[0], stock);
     });
 
-    it("should be able to list all stock", function(){
+    it("should be able to list all stock", function() {
       assert.strictEqual(store.listStock[0], record);
     });
 
-    it("should be able to sell stock", function(){
+    it("should be able to sell stock", function() {
       assert.strictEqual(store.sellARecord[3], stock);
     });
 
-    it('should find the store balance', function() {
+    it("should find the store balance", function() {
+      store.balance;
       store.addRecord(record1);
       store.addRecord(record2);
       store.addRecord(record3);
       assert.equal(store.storeBalance, 86);
     });
 
+    it("should show the stock balance", function() {
+      store.addRecord(record1);
+      store.addRecord(record2);
+      store.addRecord(record3);
+      assert.equal(store.storeBalance, 36);
+    });
 
 
 });
