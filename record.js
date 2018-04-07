@@ -13,6 +13,13 @@ Record.prototype.recordProperties = function () {
 
 };
 
+// Create a method that allows the store to view all Records of a given Genre.
+Record.prototype.recordGenre = function () {
+  return this.genre.filter(function (record) {
+    return record.genre === 'Soul';
+  });
+}
+
 
 
 

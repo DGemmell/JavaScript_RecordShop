@@ -1,6 +1,4 @@
 // Create a method that lists the inventory.
-// Create a method so the Record Store can sell
-// a Record and adjusts the Store's balance to account for the Record being sold.
 // Create a method that reports the financial situation of the Store, showing the balance and value of inventory.
 // Create a method that allows the store to view all Records of a given Genre.
 var _ = require("lodash");
@@ -35,14 +33,16 @@ Store.prototype = {
 
 Store.prototype.storeBalance = function (balance) {
   var balance = 50;
-  if(stock.length === 3 ){
+  if(stock.length === 3){
     balance = 50;
   }
   if(stock.length === 0){
     balance = 80;
   }
   return this.balance;
+
 };
+
 
 
 module.exports = Store;

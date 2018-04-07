@@ -9,6 +9,8 @@ describe ('record', function() {
       record = new Record("Otis Redding", "Dock of a Bay","Soul",10);
     })
 
+    
+
     it("should have an artist", function() {
       assert.strictEqual(record.artist, "Otis Redding");
 
@@ -32,6 +34,10 @@ describe ('record', function() {
     it("should display record details as a string", function(){
       assert.strictEqual(record.recordProperties(), "Otis Redding Dock of a Bay Soul 10")
     });
+
+    it("should filter by record genre", function(){
+      assert.strictEqual(record.recordGenre(),)
+    })
 
 
 
