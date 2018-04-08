@@ -1,4 +1,4 @@
-// Create a method that lists the inventory.
+// Create a method that lists the inventory. Commented out syntax error.
 // Create a method that reports the financial situation of the Store, showing the balance and value of inventory.
 var _ = require("lodash");
 
@@ -19,6 +19,12 @@ Store.prototype = {
 //   this.stock.forEach(function(stock)
 //     this.stock(stock);
 // };
+Store.prototype.listRecords = function () {
+var record = 0;
+for (var i = 0; i < stock.length; i++) {
+  record += stock[i]
+}
+};
 
 Store.prototype = {
   sellARecord: function(record) {

@@ -1,6 +1,4 @@
 
-
-
 var Record = function(artist, title, genre, price) {
   this.artist = artist;
   this.title = title;
