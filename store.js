@@ -1,4 +1,4 @@
-// Create a method that lists the inventory. Commented out syntax error.
+
 // Create a method that reports the financial situation of the Store, showing the balance and value of inventory.
 var _ = require("lodash");
 
