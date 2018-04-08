@@ -3,13 +3,13 @@ var Record = require('../record.js');
 
 describe ('record', function() {
     var record;
-    var shop;
+    var store;
 
     beforeEach(function(){
       record = new Record("Otis Redding", "Dock of a Bay","Soul",10);
     })
 
-    
+
 
     it("should have an artist", function() {
       assert.strictEqual(record.artist, "Otis Redding");
